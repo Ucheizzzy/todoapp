@@ -1,10 +1,18 @@
 import React from 'react'
 
-function TodoList() {
+function TodoList(props) {
+  function deleting() {
+    props.checked(props.id)
+  }
   return (
     <div>
       <ul>
-        <li></li>
+        <li onClick={deleting}>
+          {props.list}
+          <span style={{ color: 'red', marginLeft: '50px', cursor: 'pointer' }}>
+            Delete
+          </span>
+        </li>
       </ul>
     </div>
   )
