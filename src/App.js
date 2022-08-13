@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import InputField from './InputField'
 import TodoList from './TodoList'
+import Heading from './Heading'
 
 function App() {
   // create the state to add the list
@@ -26,10 +27,7 @@ function App() {
   }
   return (
     <div className='container'>
-      <div className='heading'>
-        <h1>Lion's To-Do List</h1>
-      </div>
-
+      <Heading />
       <InputField onAdd={addItems} />
 
       {items.map((todoItems, index) => {
